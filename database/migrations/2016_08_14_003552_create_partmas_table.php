@@ -16,11 +16,13 @@ class CreatePartmasTable extends Migration
             $table->increments('id');
 	    $table->string("address");
 	    $table->string("type");
-            $table->dicimal("price");
-            $table->integer("cities_id");
-	    $table->foreing("cities_id")->references("id")->on("cities");
-	    $table->integer("users_id")->references("id")->on("users");
-	    $table->string("tels_id")->references("id")->on("tels");
+            $table->decimal("price");
+            $table->integer("city_id")->unsigned();
+	    $table->integer("user_id")->unsigned();
+	    $table->integer("tel_id")->unsigned();
+	    $table->foreign("city_id")->references("id")->on("cities");
+	    $table->foreign("user_id")->references("id")->on("users");
+	    $table->foreign("tel_id")->references("id")->on("tels");
 	    $table->decimal("surface");
 	    $table->text("addInfo");
             $table->timestamps();

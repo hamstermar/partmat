@@ -14,7 +14,8 @@ class CreateTelsTable extends Migration
     {
         Schema::create('tels', function (Blueprint $table) {
             $table->increments('id');
-	    $table->string("tel_nb");
+	    $table->string("tel_nb")->unique();
+	 
         });
     }
 

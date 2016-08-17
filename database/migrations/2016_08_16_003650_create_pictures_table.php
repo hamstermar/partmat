@@ -13,7 +13,10 @@ class CreatePicturesTable extends Migration
     public function up()
     {
         Schema::create('pictures', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id'); 
+	    $table->string("namePic")->unique();
+	    $table->integer("partma_id")->unsigned();
+     	    $table->foreign("partma_id")->references("id")->on("partmas");
             $table->timestamps();
         });
     }

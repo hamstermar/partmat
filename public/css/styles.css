@@ -1,0 +1,13 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+.droid-arabic-kufi {
+	font-family: 'Droid Arabic Kufi', serif;	
+}
+body {
+
+	font-family: 'Droid Arabic Kufi', serif;	
+}
+select {
+	padding:3px !important;
+	font-family: 'Droid Arabic Kufi', serif;	
+	direction:rtl;
+}
