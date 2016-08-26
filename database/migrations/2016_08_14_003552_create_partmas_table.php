@@ -24,6 +24,7 @@ class CreatePartmasTable extends Migration
 	    $table->foreign("user_id")->references("id")->on("users");
 	    $table->foreign("tel_id")->references("id")->on("tels");
 	    $table->decimal("surface");
+	    $table->integer("typeP");
 	    $table->text("addInfo");
             $table->timestamps();
         });

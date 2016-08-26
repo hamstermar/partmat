@@ -7,9 +7,13 @@
 		<link rel="stylesheet" href="{{URL::to('/css/styles.css')}}" type="text/css" >
 		<title>@yield("title")</title>
 	</head>
-	<body style="" dir="rtl" lang="ar">
+	<body dir="rtl" lang="ar">
+	
+			@include("includes.header")
 			@yield("content")
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+
+
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
 	</body>
 </html>

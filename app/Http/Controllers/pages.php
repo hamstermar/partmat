@@ -13,4 +13,10 @@ class pages extends Controller
 		$cities = City::all(); 
 		return view("index",["cities" => $cities]);
 	}
+	public function getSearch(Request $req){
+		$cityId = $req['citySel'];
+		$search = ;
+		return view("list", ["search" => $search]);
+	}
+	
 }
