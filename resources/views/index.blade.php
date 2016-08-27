@@ -47,6 +47,7 @@
 				</tr>
 			</table>
 			<button class="btn btn-primary btn-lg" >بحت</button>
+			<input type="hidden" name="_token" value="{{ csrf_token() }}">
 		</form>
 	</div>
 @endsection

@@ -16,7 +16,9 @@ Route::post("/search", "pages@getSearch");
 Route::get("/dispose", "pages@getDispose");
 Route::get("/register", "pages@getRegister");
 Route::get("/login", "pages@getLogin");
-Route::get("/dashboard", "pages@getDash");
-
+Route::get("/dashboard", ["uses" => "pages@getDash", "as"=>"dashboard", "middleware"=>"auth"]);
 // the Execution of data
-
+//------------------------------- User Controller
+Route::post("/addUser", "UserCont@addUser");
+Route::post("/logUser", "UserCont@loginUser");
+Route::get("/logout", "UserCont@logout");
