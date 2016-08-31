@@ -14,7 +14,7 @@ class CreatePicturesTable extends Migration
     {
         Schema::create('pictures', function (Blueprint $table) {
             $table->increments('id'); 
-	    $table->string("namePic")->unique();
+	    $table->string("namePic",100)->unique();
 	    $table->integer("partma_id")->unsigned();
      	    $table->foreign("partma_id")->references("id")->on("partmas");
             $table->timestamps();

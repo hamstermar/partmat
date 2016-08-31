@@ -40,5 +40,9 @@ class pages extends Controller
 		$partmas = partma::where("id",Auth::user()->id)->get();
 		return view("/dashboard", ['partmas' => $partmas]);
 	}
+	public function getDispose(){
+		$cities = City::all();
+		return view("/dispose",["cities" => $cities]);
+	}
 	
 }

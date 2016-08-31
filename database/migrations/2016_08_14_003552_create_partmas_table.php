@@ -14,8 +14,8 @@ class CreatePartmasTable extends Migration
     {
         Schema::create('partmas', function (Blueprint $table) {
             $table->increments('id');
-	    $table->string("address");
-	    $table->string("type");
+	    $table->string("address",150);
+	    $table->string("type",10);
             $table->decimal("price");
             $table->integer("city_id")->unsigned();
 	    $table->integer("user_id")->unsigned();

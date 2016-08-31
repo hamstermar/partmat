@@ -5,7 +5,7 @@
 	<div class="container col-sm-12" id="dashBox">
 		<span>السلام و عليكم {{ $user->first }} {{ $user->last }}</span>
 	</div>
-	<button class="btn btn-success">حط دارك هنا</button>
+	<button class="btn btn-success" onclick="window.location='/dispose'">حط دارك هنا</button>
 	<div>
 		@if(count($partmas) > 0)
 						

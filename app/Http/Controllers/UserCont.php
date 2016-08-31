@@ -45,7 +45,7 @@ class UserCont extends Controller
 				$user->save();
 				Auth::login($user);	
 				//redirecting to dashboard
-				return redirect("/dashboard");
+				return redirect("/dispose");
 			}
 			else {
 				// adding error to validation errors
@@ -68,13 +68,13 @@ class UserCont extends Controller
 		if($validate->fails() == false){
 		$email = $req['email'];
 		$password = $req['password'];
-		if(Auth::attempt(["email"=>$email, "password"=>$password], true)){	
+		if(Auth::attempt(["email"=>$email, "password"=>$password])){	
 			return redirect("/dashboard");
 		}
 		else {
 			
 		//["errors" => "مودباس ولا الإمايل غالط"]);
-			$validate->errors()->add("nn","مودباس ولا الإمايل غالط");
+			$validate->errors()->add("nn","مودباس ولا الإمايل غالط".$email.":".$password);
 			return redirect()->back()->withErrors($validate);
 		}
 		}else {

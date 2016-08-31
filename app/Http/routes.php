@@ -22,3 +22,7 @@ Route::get("/dashboard", ["uses" => "pages@getDash", "as"=>"dashboard", "middlew
 Route::post("/addUser", "UserCont@addUser");
 Route::post("/logUser", "UserCont@loginUser");
 Route::get("/logout", "UserCont@logout");
+
+
+//------------------------------- Partma Controller
+Route::post("/addParmat", "PartCont@addPartma");

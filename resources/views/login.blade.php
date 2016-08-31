@@ -14,8 +14,8 @@
 
 		@endif
 		<form action="/logUser" method="POST">
-			<input type="email" name="email" placeholder="email"/><br>
-			<input type="password" name="password" placeholder="password"/><br>
+			<input type="email" name="email" placeholder="email" dir="ltr" /><br>
+			<input type="password" name="password" placeholder="password" dir="ltr"/><br>
 			<input type="submit" value="login" name="login" />
 			<input type="hidden" value="{{ csrf_token()}}" name="_token">
 		</form>
