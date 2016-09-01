@@ -19,10 +19,8 @@ class CreatePartmasTable extends Migration
             $table->decimal("price");
             $table->integer("city_id")->unsigned();
 	    $table->integer("user_id")->unsigned();
-	    $table->integer("tel_id")->unsigned();
 	    $table->foreign("city_id")->references("id")->on("cities");
 	    $table->foreign("user_id")->references("id")->on("users");
-	    $table->foreign("tel_id")->references("id")->on("tels");
 	    $table->decimal("surface");
 	    $table->integer("typeP");
 	    $table->text("addInfo");

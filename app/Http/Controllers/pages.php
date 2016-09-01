@@ -37,7 +37,7 @@ class pages extends Controller
 		}
 	}
 	public function getDash(){
-		$partmas = partma::where("id",Auth::user()->id)->get();
+		$partmas = partma::where("id",Auth::user()->id);
 		return view("/dashboard", ['partmas' => $partmas]);
 	}
 	public function getDispose(){

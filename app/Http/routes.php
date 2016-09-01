@@ -25,4 +25,4 @@ Route::get("/logout", "UserCont@logout");
 
 
 //------------------------------- Partma Controller
-Route::post("/addParmat", "PartCont@addPartma");
+Route::post("/addPartma", "PartCont@addPartma");
