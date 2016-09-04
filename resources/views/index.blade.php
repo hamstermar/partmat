@@ -11,39 +11,39 @@
 					<option value="{{$city->id}}" >{{$city->name}}</option>
 				@endforeach	
 			</select>
-			<table border="0" >
-			<tr>
-			<td colspan="2" style="padding-bottom:3px;">
-			<label for="selPrice">
+			<!--label for="price">
 				الثمن لما تقدرش تفوتو
 			</label>
-			<input type="range" value="0"  min="0" max="100">
+			<input type="text" class="form-control" placeholder="price" name="price"/ -->
+			<table border="0" >
 			<!--select name="priceRang" class="form-control" >
 				<option value="none">الثمن</option>
 			</select -->
-			</td>
-			</tr>
 			<tr>
-			<td>
-			<select name="priceRang" class="form-control" >
+			<!--td>
+			<select name="surface" class="form-control" >
 				<option value="none">المساحة</option>
 			</select>
-			</td>
+			</td-->
 			<td>
-			<select name="typeImm" class="form-control" >
-				<option value="1">بغيت بارطما</option>
-				<option value="2">بغيت فيلا</option>
-				<option value="3">بغيت ماكازا</option>
-			</select>
+			<select name="type" class="form-control" >
+				<option value="1">بارطما</option>
+				<option value="2">فيلا</option>
+				<option value="3">ماكازا</option>
+			</select>	
 			</td>
+			<!--td>		
+      <select name="typeP" class="form-control">
+		<option value="1">مفرشة</option>
+		<option value="2">مامفرشاش</option>
+	</select>
+			</td-->
 			</tr>
 			</table>	
-
-				
 			<table class="table table-bordered" style="font-size:16px;background-color:white;">
 				<tr>
-					<td><input  type="radio" name="reqType" value="1"  /> باغي نكري</td>
-					<td><input  type="radio" name="reqType" value="2"/> باغي نشري</td>
+					<td><input  type="radio" name="rent" value="true"  /> باغي نكري</td>
+					<td><input  type="radio" name="rent" value="false"/> باغي نشري</td>
 				</tr>
 			</table>
 			<button class="btn btn-primary btn-lg" >بحت</button>

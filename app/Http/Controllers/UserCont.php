@@ -85,4 +85,54 @@ class UserCont extends Controller
 			Auth::logout();
 			return redirect("/login");
 		}
+		public function updUser(Request $req){
+		/*$validate = Validator::make($req->all(), [
+		"email" => "email|required|max:120|unique:users",
+		"password" => "required|max:120|min:6",
+		"first_name" => "required|max:120",
+		"last_name" => "required|max:120",
+		], [	
+		"password.required" => "مودباس ضروري",
+		"password.min" => "المودباس صغير ! خاص على الاقل إكون فيه 6 الحروف",
+		"email.required" => "الإمايل ضروري",
+		"password.max" => "مودباس طويل بزاف",
+		"email.max" => "إميل طويل بزاف",
+		"email.email" => "الإمايل ما ما مكتوبش مزيان",
+		"first_name.required" => "السمية ضرورية",
+		"last_name.required" => "الكنية ضرورية",
+		"first_name.max" => "السمية كبيرة بزاف",
+		"last_name.required.max" => "الكنية كبيرة بزاف"
+		]);
+		*/
+	
+		if($validate->fails() == false){
+			$user = Auth::user();
+			if($req->has('first')){
+			$first = $req['first'];
+			}
+			if($req->has('last')){
+			$last = $req['last'];
+			}
+			if($req->has('email')){
+			$email = $req['email'];
+			}
+			if($req->has('password_comf')){
+			$password = $req['password'];
+			$password_comf = $req['password_comf'];	
+			$password_comf = $req['password_comf']	
+			if($password == $password_comf){
+				// Update the Current user
+				$user = Auth::user();
+				$user->password = $password;
+				$user->save();
+			}
+			else {
+				$validate->errors()->add("nn", "مودباسات ماشي بحال بحال");
+			}
+			}
+			
+		}
+		}else {
+			return redirect()->back()->withErrors($validate)
+		}
 }

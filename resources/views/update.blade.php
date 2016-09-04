@@ -1,8 +1,8 @@
 @extends("layouts.master")
-@section("title", "dispose")
+@section("title", "Update")
 @section("content")
-	<div class="container" style="margin-top:10px;">
-	<form method="POST" action="/addPartma">
+	<div class="container">
+		<form action="/updPartma/{{ $id }}" method="POST">
 	<select name="citySel" class="form-control">
 		<option value="none" >ختار المدينة</option>
 		@foreach($cities as $city)
@@ -35,7 +35,6 @@
 	<textarea name="addInfo" class="form-control" rows="5" id="addInfo"></textarea>
 	<button type="submit" class="btn btn-success btn-lg" style="margin-top:5px;">حط دارك</button>
 	<input type="hidden" value="{{ csrf_token()}}" name="_token">
-	</form>
+		</form>
 	</div>
 @endsection
-

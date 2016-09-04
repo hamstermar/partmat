@@ -17,12 +17,15 @@ Route::get("/dispose", "pages@getDispose");
 Route::get("/register", "pages@getRegister");
 Route::get("/login", "pages@getLogin");
 Route::get("/dashboard", ["uses" => "pages@getDash", "as"=>"dashboard", "middleware"=>"auth"]);
+Route::get("/update/{id}", ["uses" => "pages@getUpdate", "as"=>"update", "middleware"=>"auth"]);
+Route::get("/editProf", ["uses"=>"pages@getProf", "as"=>"profile", "middleware"=>"auth"]);
 // the Execution of data
 //------------------------------- User Controller
 Route::post("/addUser", "UserCont@addUser");
 Route::post("/logUser", "UserCont@loginUser");
 Route::get("/logout", "UserCont@logout");
-
-
+Route::get("/updProf", "UserCont@updUser");
 //------------------------------- Partma Controller
 Route::post("/addPartma", "PartCont@addPartma");
+Route::get("/delParmta/{id}", "PartCont@delPartma");
+Route::post("/updPartma/{id}", "PartCont@updPartma");
